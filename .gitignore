@@ -1,0 +1,5 @@
+~
+.swp
+files/*.bin
+files/*.gz
+files/*.dmg

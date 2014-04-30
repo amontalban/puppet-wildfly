@@ -1,0 +1,36 @@
+# General configuration for the init.d scripts,
+# not necessarily for JBoss AS itself.
+# default location: /etc/default/wildfly
+
+# Location of JDK	
+# JAVA_HOME=/usr/lib/jvm/default-java
+
+# Location of WildFly
+JBOSS_HOME=<%= scope.lookupvar("wildfly::install_dir") %>/wildfly
+
+# The username who should own the process.
+JBOSS_USER=<%= scope.lookupvar("wildfly::user") %>
+
+# The mode WildFly should start, standalone or domain
+JBOSS_MODE=<%= scope.lookupvar("wildfly::mode") %>
+
+# Configuration for standalone mode
+#
+JBOSS_CONFIG=<%= scope.lookupvar("wildfly::profile") %>
+
+# Configuration for domain mode
+#
+# JBOSS_DOMAIN_CONFIG=domain.xml
+# JBOSS_HOST_CONFIG=host-master.xml
+
+# The amount of time to wait for startup
+STARTUP_WAIT=<%= scope.lookupvar("wildfly::wait_time") %>
+
+# The amount of time to wait for shutdown
+SHUTDOWN_WAIT=<%= scope.lookupvar("wildfly::wait_time") %>
+
+# Location to keep the console log
+JBOSS_CONSOLE_LOG=<%= scope.lookupvar("wildfly::console_log") %>
+
+# Location to PID file
+JBOSS_PIDFILE=<%= scope.lookupvar("wildfly::pid_file") %>
