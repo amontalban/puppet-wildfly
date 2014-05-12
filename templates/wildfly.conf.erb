@@ -34,3 +34,9 @@ JBOSS_CONSOLE_LOG=<%= scope.lookupvar("wildfly::console_log") %>
 
 # Location to PID file
 JBOSS_PIDFILE=<%= scope.lookupvar("wildfly::pid_file") %>
+
+# Bind address (-b=<JBOSS_BIND_ADDRESS>)
+JBOSS_BIND_ADDRESS=<%= scope.lookupvar("wildfly::bind_address") %>
+
+# Bind address for management (-bmanagement=<JBOSS_BIND_ADDRESS_MANAGEMENT>)
+JBOSS_BIND_ADDRESS_MANAGEMENT=<%= scope.lookupvar("wildfly::bind_address_management") %>
